@@ -1,0 +1,60 @@
+.navbar {
+    background-color: #301157;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.overflow-scroll {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.collapse {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.navbar-nav {
+    background-color: #301157;
+}
+
+.nav-item :hover {
+    background-color: #6923be;
+}
+
+.form-inline {
+    width: 70%;
+}
+
+.input-group {
+    width: 70%;
+}
+
+.form-control {
+    width: 65%;
+}
+
+.dropdown-menu {
+    background-color: #6923be;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #301157;
+}
+
+.footer-content-top {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-size: 0.7em;
+	color: #ffffff;
+}
+
+.footer-content-bottom {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: 0.7em;
+	color: #ffffff;
+}

@@ -1,0 +1,8 @@
+.card, .row {
+    margin: 5px;
+}
+
+#dropdownMenuButton {
+    margin-top: 5px;
+    background-color: #301157;
+}

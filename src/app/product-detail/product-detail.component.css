@@ -1,0 +1,15 @@
+.img-thumbnail {
+    max-width: 300px;
+}
+
+.btn-edit {
+    background-color: #301157;
+}
+
+.btn-update {
+    background-color: #301157;
+}
+
+.input-update {
+    width: 100%;
+}

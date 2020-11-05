@@ -1,0 +1,16 @@
+#jumbotron {
+    align-items: center;
+    text-align: center;
+    color: #301157;
+}
+
+.lead {
+    margin-top: 25px;
+}
+
+#jumbotron1 {
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    color: #6923be;
+}

@@ -1,0 +1,70 @@
+<div class="row row-cols-1 row-cols-md-3">
+    <div class="col mb-4" *ngFor='let product of products'>
+        <div class="card h-100">
+            <div>
+                <img [src]="product['imgsrc']" class="card-img-top" alt="Image">
+                <input type="checkbox" class="form-check-input" [attr.value]="product.id" [attr.id]="product.id" *ngIf="displayBool">
+            </div>
+            <div class="card-body">
+                <h6 class="card-subtitle float-right" id="price" *ngIf="_priceChecked">Price: &#8377; {{ product.price }}</h6>
+                <h5 class="card-title">{{ product.name }}</h5>
+                <h6 class="card-subtitle" *ngIf="_companyChecked">{{ product.company }}</h6>
+                <h6 id="quantity">Quantity: {{ product.quantity }}</h6>
+                <br><hr *ngIf="_descriptionChecked">
+                <p class="card-text" *ngIf="_descriptionChecked">{{ product.description }}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-read text-light" type="button" *ngIf="displayBool" (click)="deleteProduct(product)">Delete</button>
+                <button class="btn btn-read text-light float-right" type="button" (click)="updateCount(product)" [routerLink]="['/details', product.id]">More Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+<nav aria-label="Page navigation" *ngIf="_displayPage">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="getPageProducts(first)">First</a></li>
+        <li class="page-item"><a class="page-link" (click)="getPageProducts(previous)">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="getPageProducts(next)">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="getPageProducts(last)">Last</a></li>
+    </ul>
+</nav>
+<nav aria-label="Page navigation" *ngIf="_displayName">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="orderByName(first)">First</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByName(previous)">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByName(next)">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByName(last)">Last</a></li>
+    </ul>
+</nav>
+<nav aria-label="Page navigation" *ngIf="_displayCompany">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="orderByCompany(first)">First</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByCompany(previous)">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByCompany(next)">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByCompany(last)">Last</a></li>
+    </ul>
+</nav>
+<nav aria-label="Page navigation" *ngIf="_displayQuantity">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="orderByQuantity(first)">First</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByQuantity(previous)">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByQuantity(next)">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByQuantity(last)">Last</a></li>
+    </ul>
+</nav>
+<nav aria-label="Page navigation" *ngIf="_displayPrice">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="orderByPrice(first)">First</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByPrice(previous)">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByPrice(next)">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="orderByPrice(last)">Last</a></li>
+    </ul>
+</nav>
+<nav aria-label="Page navigation" *ngIf="_displayRevPrice">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="reverseByPrice(first)">First</a></li>
+        <li class="page-item"><a class="page-link" (click)="reverseByPrice(previous)">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="reverseByPrice(next)">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="reverseByPrice(last)">Last</a></li>
+    </ul>
+</nav>

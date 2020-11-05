@@ -1,0 +1,69 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header text-light">
+                <h4>Add a Product</h4>
+            </div>
+            <div class="card-body">
+                <form id="form" [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+                    <div class="form-group form-inline">
+                        <label for="name">Product Name</label>
+                        <input type="text" class="form-control" id="name" formControlName="name">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="company">Manufacturer</label>
+                        <input type="text" class="form-control" id="company" formControlName="company">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" formControlName="price">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" formControlName="quantity">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="imageUrl">Select Image to Upload</label>
+                        <input type="file" class="form-control-file" id="imageUrl" (change)="processImage($event)">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" formControlName="description"></textarea>
+                    </div>
+                    <hr>
+                    <h5>Specifications</h5>
+                    <div id="specifications">
+                        <!-- <div class="form-group form-inline">
+                            <input type="text" for="field1" id="label1">
+                            <input type="text" class="form-control" id="feild1" formControlName="field1">
+                        </div> -->
+                    </div>
+                    <button type="button" class="btn btn-submit text-light" data-toggle="modal" data-target="#specModal">Add Specification</button>
+                    <div class="modal fade" id="specModal" tabindex="-1" aria-labelledby="modal" data-target="toggleModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Specification</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h6>Provide Specification Name</h6>
+                                    <input type="text" class="form-control" id="specificationName">
+                                    <h6>Provide Specification value</h6>
+                                    <input type="text" class="form-control" id="specificationValue">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-submit text-light" (click)="addSpecification()">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit float-right text-light">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

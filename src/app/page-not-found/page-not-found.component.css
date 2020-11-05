@@ -1,0 +1,12 @@
+html, body {
+    height: 550px;
+    background-color: yellow;
+}
+
+.row {
+    height: 550px;
+}
+
+.card-header {
+    background-color: #301157;
+}

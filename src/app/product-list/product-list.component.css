@@ -1,0 +1,19 @@
+.row {
+    margin-top: 10px;
+}
+
+.btn-read {
+    background-color: #301157;
+}
+
+.card-footer {
+    display: inline;
+}
+
+#quantity {
+    margin-top: 5px;
+}
+
+#price {
+    margin-top: 4px;
+}

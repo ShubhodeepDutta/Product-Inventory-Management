@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-light">
+                    <h4>Profile</h4>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="account">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" [value]="" formControlName="name" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" [value]="" formControlName="email" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <input type="text" class="form-control" id="contact" [value]="" formControlName="contact" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" [value]="" formControlName="location" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

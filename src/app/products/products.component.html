@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="card border border-secondary rounded-lg">
+            <div class="card-header">
+                <h5>Customize</h5>
+            </div>
+            <ul class="list-group list-group-flush overflow-hidden">
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [checked]="priceChecked" (change)="isPriceChecked($event.target.checked)">
+                        <label class="form-check-label" for="checkbox1">Price</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [checked]="descriptionChecked" (change)="isDescriptionChecked($event.target.checked)">
+                        <label class="form-check-label" for="checkbox2">Description</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [checked]="companyChecked" (change)="isCompanyChecked($event.target.checked)">
+                        <label class="form-check-label" for="checkbox3">Manufacturer</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-9">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort By
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item" type="button" value="name" (click)="selection($event.target.value)">Name</button>
+                <button class="dropdown-item" type="button" value="companyName" (click)="selection($event.target.value)">Manufacturer</button>
+                <button class="dropdown-item" type="button" value="quantity" (click)="selection($event.target.value)">Quantity</button>
+                <button class="dropdown-item" type="button" value="lowToHigh" (click)="selection($event.target.value)">Price: Low to High</button>
+                <button class="dropdown-item" type="button" value="highToLow" (click)="selection($event.target.value)">Price: High to Low</button>
+            </ul>
+        </div>
+
+        <app-product-list></app-product-list>
+    </div>
+</div>
